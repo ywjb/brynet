@@ -3,8 +3,9 @@
 #include <brynet/base/Platform.hpp>
 
 #ifdef BRYNET_PLATFORM_WINDOWS
-#include <winsock2.h>
+#define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
+#include <winsock2.h>
 #elif defined BRYNET_PLATFORM_LINUX
 #include <linux/unistd.h>
 #include <sys/prctl.h>
